@@ -1,0 +1,6 @@
+model ContactMedium {
+    id         String         @id @default(uuid())
+    postedType ContactDetails
+    FieldOne   String?
+    FieldTwo   String?
+}

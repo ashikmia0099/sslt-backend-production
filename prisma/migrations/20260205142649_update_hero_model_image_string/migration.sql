@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Hero" ALTER COLUMN "image" DROP NOT NULL;

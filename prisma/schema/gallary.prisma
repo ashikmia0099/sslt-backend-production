@@ -1,0 +1,6 @@
+model Gallary {
+    id                  String @id @default(uuid())
+    width               Int
+    image               String
+    dynamicDescriptions Json?
+}

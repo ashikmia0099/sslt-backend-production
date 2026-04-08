@@ -1,0 +1,107 @@
+// hero model 
+model Hero {
+    id            String     @id @default(uuid())
+    postType      BannerType
+    title         String?
+    shortOverview String?
+    image         String?
+    createdAt     DateTime   @default(now())
+    updatedAt     DateTime   @updatedAt
+}
+
+// hero second model 
+
+model BannerSecond {
+    id            String            @id @default(uuid())
+    ImagePostType ImagePostTypeEnum
+
+    // single image post filed
+    Doctor_Name       String?
+    Doctor_Position   String?
+    Working_place     String?
+    Description_Title String?
+    Description       String?
+    SingleImage       String?
+
+    dynamicDescriptions Json?
+
+    // dual image select filed 
+    Choose_Dual_Type_Image_1 String?
+    Choose_Dual_Type_Image_2 String?
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+
+// mission vission object model 
+
+model MissionVissionObject {
+    id                  String     @id @default(uuid())
+    postType            BannerType
+    Image               String
+    Title               String
+    Description         String
+    dynamicDescriptions Json?
+}
+
+// three banner type
+
+model ThreeBanner {
+    id            String          @id @default(uuid())
+    Selected_type ThreeBannerType
+    BannerTitle   String
+    Description   String
+    Image         String
+}
+
+// popular medical desis model 
+
+model PopularMedicalDecis {
+    id                  String  @id @default(uuid())
+    Desis_Name          String?
+    Choose_Image        String?
+    Description_Title   String?
+    Description         String?
+    dynamicDescriptions Json?
+}
+
+// communication and healthcare model 
+
+model CommunicationAndHealthcare {
+    id                  String @id @default(uuid())
+    Title_Name          String
+    Overview            String
+    Choose_Image        String
+    DescriptionTitle    String
+    Description         String
+    dynamicDescriptions Json
+}
+
+// Hearing and healthcare model 
+
+model HearingAndHealthcare {
+    id          String @id @default(uuid())
+    Title_Name  String
+    Description String
+}
+
+// Founding member message model 
+
+model FoundingMemberMessage {
+    id                       String             @id @default(uuid())
+    ChooseFoundingMemberType FoundingMemberType
+    Name                     String
+    Description              String
+    Choose_Image             String
+}
+
+// our community event model 
+
+model OurCommunityEvent {
+    id               String @id @default(uuid())
+    Event_Title      String
+    Event_Place_Name String
+    Description      String
+    Choose_Image     String
+}

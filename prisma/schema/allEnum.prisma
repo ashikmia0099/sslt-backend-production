@@ -1,0 +1,45 @@
+enum ImagePostTypeEnum {
+    SingleImage
+    DualImage
+}
+
+enum BannerType {
+    Text
+    Image
+}
+
+enum ThreeBannerType {
+    BannerOne
+    BannerTWo
+    BannerThree
+}
+
+enum FoundingMemberType {
+    Pesident
+    Secretary
+    Founding
+}
+
+enum ContactDetails {
+    Phone
+    Email
+    Address
+    OpeningDayTime
+}
+
+enum DonationTextOrAmount {
+    Text
+    Amount
+}
+
+enum UserType {
+    ADMIN
+    USER
+}
+
+enum SocialMediaName {
+    Facebook
+    Youtube
+    Twitter
+    Linkedin
+}

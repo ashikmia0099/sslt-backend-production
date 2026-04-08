@@ -1,0 +1,22 @@
+model DonationTextAndAmount {
+    id             String               @id @default(uuid())
+    selectedType   DonationTextOrAmount
+    Title          String?
+    Description    String?
+    NumberOfAmount Int?
+}
+
+model DonationMedium {
+    id             String  @id @default(uuid())
+    MFS_Bank_Name  String
+    MFS_Bank_Image String
+    shortOverview  String
+    FieldOne       String?
+    FieldTwo       String?
+}
+
+model DonationFAQ {
+    id          String @id @default(uuid())
+    Title_Name  String
+    Description String
+}

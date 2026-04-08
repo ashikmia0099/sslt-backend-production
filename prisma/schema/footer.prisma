@@ -1,0 +1,5 @@
+model Footer {
+    id         String @id @default(uuid())
+    socialLink String
+    selectedType SocialMediaName
+}

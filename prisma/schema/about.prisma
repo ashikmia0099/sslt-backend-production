@@ -1,0 +1,36 @@
+// hero model 
+model aboutHero {
+    id            String     @id @default(uuid())
+    selected_type BannerType
+    title         String?
+    shortOverview String?
+    descripiton   String?
+    image         String?
+    createdAt     DateTime   @default(now())
+    updatedAt     DateTime   @updatedAt
+}
+
+// three banner type
+
+model aboutThreeBanner {
+    id            String          @id @default(uuid())
+    selected_type ThreeBannerType
+    BannerTitle   String
+    Description   String
+    Image         String
+}
+
+// Last banner model 
+
+model lastBanner {
+    id            String     @id @default(uuid())
+    selected_type BannerType
+    title         String?
+    descripiton   String?
+    image         String?
+    createdAt     DateTime   @default(now())
+    updatedAt     DateTime   @updatedAt
+}
+
+
+
