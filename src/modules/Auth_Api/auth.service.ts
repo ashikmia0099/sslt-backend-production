@@ -114,7 +114,8 @@ const login = async ( email: string, password: string) => {
                 id: findEmail.id,
                 name: findEmail.name,
                 email: findEmail.email,
-                role: findEmail.role
+                role: findEmail.role,
+                isVerified: findEmail.isVerified
             }
         }
 
@@ -136,12 +137,13 @@ const getAlluser = async () => {
 }
 
 
-const updateUserRole = async (id: string, role: "ADMIN" | "USER") => {
+const updateUserRole = async (id: string, name : string, role: "ADMIN" | "USER") => {
 
     try {
         const result = await prisma.user.update({
             where: { id: id },
             data: {
+                name,
                 role
             }
         })

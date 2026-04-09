@@ -22,8 +22,7 @@ const getAllUser = async (req: Request, res: Response, next: NextFunction) => {
 const register = async (req: Request, res: Response, next: NextFunction) => {
 
     try {
-        const { name, email, password, emailVerifyToken } = req.body;
-
+        const { name, email, password } = req.body;
 
         const data = await authService.register(name, email, password);
         res.status(200).json({
@@ -44,7 +43,7 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
         const { email, password } = req.body;
 
 
-        const data = await authService.login( email, password);
+        const data = await authService.login(email, password);
         res.status(200).json({
             success: true,
             message: "You are register successfully",
@@ -60,9 +59,9 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
 const updateUserRole = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const id = req.params.id as string;
-        const { role } = req.body;
+        const { name, role } = req.body;
 
-        const data = await authService.updateUserRole(id, role)
+        const data = await authService.updateUserRole(id, name, role)
 
         res.status(200).json({
             success: true,
