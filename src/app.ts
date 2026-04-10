@@ -24,9 +24,29 @@ import { socialRouter } from "./modules/Footer_Api/Social.router";
 
 const app: Application = express()
 
+// app.use(cors({
+//   origin: process.env.FRONTEND_URL,
+//   credentials: true,
+// }));
+
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  process.env.FRONTEND_LOCAL
+];
+
 app.use(cors({
-    origin: "http://localhost:3000",
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error("CORS not allowed"), false);
+    }
+  },
+  credentials: true,
 }));
+
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
