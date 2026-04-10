@@ -34,20 +34,7 @@ const postDonationTextandAmount = async (
     }
 }
 
-// const updateDonationTextandAmount = async (id: string, updatedData: any) => {
 
-//     try {
-//         const result = await prisma.donationTextAndAmount.update({
-//             where: { id: id },
-//             data: updatedData
-//         })
-//         return result
-
-//     } catch (err: any) {
-//         console.log(err)
-//         throw new Error("Donation text and amout data doesn`t updated successfully", err)
-//     }
-// }
 
 
 const updateDonationTextandAmount = async (id: string, updatedData: any) => {
