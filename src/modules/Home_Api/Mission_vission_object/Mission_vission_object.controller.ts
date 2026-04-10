@@ -121,7 +121,6 @@ const deleteMissionVissionObject = async (req: Request, res: Response, next: Nex
   try {
 
     const id = req.params.id as string;
-    console.log("this is news id", id)
 
     const deleteData = await Mission_vission_objectService.deleteMissionVissionObject(id);
 

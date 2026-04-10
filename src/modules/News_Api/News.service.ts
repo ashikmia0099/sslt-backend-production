@@ -44,7 +44,6 @@ const updateNews = async (id: string, updateData: any) => {
         return result;
 
     } catch (err: any) {
-        console.log(err);
         throw new Error("News update failed");
     }
 };

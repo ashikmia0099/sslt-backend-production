@@ -55,13 +55,11 @@ const Home_Hero_Get = async (req: Request, res: Response, next: NextFunction) =>
 const getDynamicData = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const id = req.params.id as string;
-    console.log(id)
 
     const result = await prisma.hero.findUnique({
       where: { id }
     })
 
-    console.log(result)
 
     if (!result) {
       return res.status(404).json({
@@ -75,8 +73,8 @@ const getDynamicData = async (req: Request, res: Response, next: NextFunction) =
       data: result
     })
 
-  } catch (error) {
-    console.log('data not found')
+  } catch (err: any) {
+     next(err)
   }
 
 }
@@ -115,7 +113,6 @@ const deleteHero = async(req : Request, res : Response, next : NextFunction) =>{
     try{
 
         const id = req.params.id as string;
-        console.log("this is news id", id)
 
         const deleteData = await heroSerivce.deleteHero(id);
 

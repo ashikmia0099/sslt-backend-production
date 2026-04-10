@@ -49,8 +49,7 @@ const createCommunityController = async (req: Request, res: Response, next: Next
 
 const updateCommunity = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        console.log("BODY:", req.body);
-        console.log("FILE:", req.file);
+
 
         const id = req.params.id as string;
         const { Event_Title, Event_Place_Name, Description } = req.body;
@@ -76,7 +75,6 @@ const updateCommunity = async (req: Request, res: Response, next: NextFunction) 
         });
 
     } catch (err) {
-        console.error("ERROR:", err); // 🔥 THIS LINE
         next(err);
     }
 };
@@ -89,7 +87,6 @@ const deleteCommunity = async (req: Request, res: Response, next: NextFunction) 
     try {
 
         const id = req.params.id as string;
-        console.log("this is news id", id)
 
         const deleteData = await CommunityService.deleteCommunity(id);
 

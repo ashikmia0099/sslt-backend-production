@@ -54,7 +54,6 @@ const updateAboutLastBanner = async (id: string, selected_type: "Text" | "Image"
         return result
 
     } catch (err: any) {
-        console.log(err)
         throw new Error("About last banner data doesn`t updated successfully", err)
     }
 }

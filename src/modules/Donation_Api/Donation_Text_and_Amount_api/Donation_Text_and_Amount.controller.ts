@@ -45,7 +45,6 @@ const postDonationTextandAmount = async (req: Request, res: Response, next: Next
 const deleteDonationTextandAmount = async(req : Request, res : Response, next : NextFunction) =>{
     try{
         const id = req.params.id as string;
-        console.log("this is news id", id)
 
         const deleteData = await Donation_Text_and_AmountService.deleteDonationTextandAmount(id);
 

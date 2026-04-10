@@ -7,12 +7,13 @@ const port = process.env.PORT || 5000
 async function main() {
     try {
         await prisma.$connect();
-        console.log('Connected to the successfully in database!');
+        // console.log('Connected to the successfully in database!');
         app.listen(port, () => {
-            console.log(`server is running port on ${port}`);
+            // console.log(`server is running port on ${port}`);
+            return (`server is running port on ${port}`);
         })
     } catch(error) {
-        console.log("an error occured", error);
+        // console.log("an error occured", error);
         prisma.$disconnect();
         process.exit(1);
     }

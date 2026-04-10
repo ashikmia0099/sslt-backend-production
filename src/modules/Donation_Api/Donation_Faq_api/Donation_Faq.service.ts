@@ -65,7 +65,6 @@ const updateDonationFaq = async (id: string, updatedData: any) => {
         return result
 
     } catch (err: any) {
-        console.log(err)
         throw new Error("Donation FAQ data doesn`t updated successfully", err)
     }
 }

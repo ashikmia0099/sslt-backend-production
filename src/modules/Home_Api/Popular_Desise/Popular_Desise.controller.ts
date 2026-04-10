@@ -106,7 +106,6 @@ const deletePopularDesis = async (req: Request, res: Response, next: NextFunctio
     try {
 
         const id = req.params.id as string;
-        console.log("this is news id", id)
 
         const deleteData = await PopularDesisService.deletePopularDesis(id);
 

@@ -79,7 +79,6 @@ const deleteNews = async (req: Request, res: Response, next: NextFunction) => {
     try {
 
         const id = req.params.id as string;
-        console.log("this is news id", id)
 
         const deleteData = await NewsService.deleteNews(id);
 

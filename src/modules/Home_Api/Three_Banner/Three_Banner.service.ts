@@ -20,7 +20,6 @@ const ThreeBannerServicePost = async (data: {
         let ImageUrl = await ThreeBannerImageUploadInCloudinery(
             data.ImageBuffer
         )
-        console.log("Three banner Service Post")
 
         const result = await prisma.threeBanner.create({
             data: {
@@ -44,7 +43,7 @@ const ThreeBannerServiceGet = async () => {
         return result
 
     } catch (err) {
-        console.log('data not found in service')
+        throw err
     }
 }
 

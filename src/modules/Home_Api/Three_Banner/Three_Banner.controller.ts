@@ -53,13 +53,10 @@ const updateThreeBanner = async (req: Request, res: Response, next: NextFunction
 }
 
 
-
-
 const deletethreeBanner = async(req : Request, res : Response, next : NextFunction) =>{
     try{
 
         const id = req.params.id as string;
-        console.log("this is news id", id)
 
         const deleteData = await ThreeBannerService.deletethreeBanner(id);
 

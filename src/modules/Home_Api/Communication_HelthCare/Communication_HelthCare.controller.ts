@@ -24,7 +24,6 @@ export const createCommunication_HelthCare = async (req: Request, res: Response,
     try {
         const { Title_Name, Overview, DescriptionTitle, Description, dynamicDescriptions } = req.body;
 
-        console.log(req.body)
         let chooseImageUrl = "";
 
         if (req.file && req.file.buffer) {
@@ -54,7 +53,6 @@ export const updateCommunicationHelthCare = async (req: Request, res: Response, 
         const id = req.params.id as string;
         const { Title_Name, Overview, DescriptionTitle, Description, dynamicDescriptions } = req.body;
 
-        console.log(req.body)
         let chooseImageUrl = "";
 
         if (req.file && req.file.buffer) {
@@ -113,7 +111,6 @@ const deleteCommunicationHelthCare = async (req: Request, res: Response, next: N
     try {
 
         const id = req.params.id as string;
-        console.log("this is news id", id)
 
         const deleteData = await Communication_HelthCareService.deleteCommunicationHelthCare(id);
 

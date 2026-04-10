@@ -39,7 +39,6 @@ const deleteCommunictionHearing = async (req: Request, res: Response, next: Next
     try {
 
         const id = req.params.id as string;
-        console.log("this is news id", id)
 
         const deleteData = await Communiction_HearingService.deleteCommunictionHearing(id);
 

@@ -226,7 +226,7 @@ const HeroSecondControllerGet = async (req: Request, res: Response, next: NextFu
     const result = await HeroSecondService.HeroSecondServiceGet()
     res.status(200).json(result)
   } catch (err) {
-    console.log('error')
+    next(err);
   }
 }
 

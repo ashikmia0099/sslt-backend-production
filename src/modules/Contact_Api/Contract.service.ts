@@ -74,7 +74,6 @@ const updateContact = async (
         return result
 
     } catch (err: any) {
-        console.log(err)
         throw new Error("Contact data doesn`t updated successfully", err)
     }
 }

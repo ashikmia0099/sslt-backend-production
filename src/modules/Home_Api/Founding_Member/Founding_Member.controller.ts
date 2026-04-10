@@ -54,7 +54,6 @@ const deleteFoundingMember = async (req: Request, res: Response, next: NextFunct
     try {
 
         const id = req.params.id as string;
-        console.log("this is news id", id)
 
         const deleteData = await FoundingMemberService.deleteFoundingMember(id);
 
