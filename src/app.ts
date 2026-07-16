@@ -92,7 +92,7 @@ app.use('/footer', socialRouter)
 
 
 app.get('/', (req: Request, res: Response) => {
-    res.send('Hello Bangladesh!')
+    res.send('Hello Bangladesh People!')
 })
 
 
